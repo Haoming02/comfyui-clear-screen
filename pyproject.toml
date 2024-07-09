@@ -1,14 +1,13 @@
 [project]
 name = "comfyui-clear-screen"
-description = "This is an Extension for ComfyUI, which adds a button, CLS, to clear the console window."
+description = "Adds a CLS button to clear the console"
 version = "1.0.0"
-license = "LICENSE"
+license = "MIT"
 
 [project.urls]
 Repository = "https://github.com/Haoming02/comfyui-clear-screen"
-#  Used by Comfy Registry https://comfyregistry.org
 
 [tool.comfy]
-PublisherId = ""
-DisplayName = "comfyui-clear-screen"
+PublisherId = "haoming02"
+DisplayName = "Clear Screen"
 Icon = ""
