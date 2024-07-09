@@ -8,7 +8,7 @@ app.registerExtension({
 
 		const clsButton = document.createElement("button");
 		clsButton.textContent = "CLS";
-		clsButton.addEventListener("click", () => api.fetchApi('/utils/cls'));
+		clsButton.addEventListener("click", () => api.fetchApi("/utils/cls"));
 
 		const clearButton = document.getElementById("comfy-clear-button");
 		menu.insertBefore(clsButton, clearButton);
