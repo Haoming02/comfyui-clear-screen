@@ -6,7 +6,10 @@ function legacy() {
 
 	const clsButton = document.createElement("button");
 	clsButton.textContent = "CLS";
-	clsButton.addEventListener("click", () => api.fetchApi("/utils/cls"));
+	clsButton.addEventListener("click", () => {
+		api.fetchApi("/utils/cls");
+		console.clear();
+	});
 
 	const clearButton = document.getElementById("comfy-clear-button");
 	menu.insertBefore(clsButton, clearButton);
@@ -16,27 +19,26 @@ async function frontend() {
 	const btn = new (await import("../../scripts/ui/components/button.js")).ComfyButton({
 		icon: "backspace-outline",
 		action: () => {
-			api.fetchApi("/utils/cls")
+			api.fetchApi("/utils/cls");
+			console.clear();
 		},
 		tooltip: "Clear Console",
 		content: "CLS",
-		classList: "comfyui-button comfyui-menu-mobile-collapse"
+		classList: "comfyui-button comfyui-menu-mobile-collapse",
 	}).element;
 
-	app.menu?.actionsGroup.element.after(btn);
+	app.menu.actionsGroup.element.after(btn);
 }
 
 app.registerExtension({
-	name: "Comfy.CLS",
+	name: "Comfy.ClearScreen",
 	async setup() {
-
 		try {
 			await frontend();
 		} catch {
-			// No Frontend?
+			// No Frontend
 		}
 
 		legacy();
-
-	}
+	},
 });
