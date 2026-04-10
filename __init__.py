@@ -14,5 +14,6 @@ async def clear_console(request):
         os.system("cls")
     else:
         os.system("clear")
+        print("\033[H\033[2J\033[3J", end="")
 
     return web.Response(status=200)
