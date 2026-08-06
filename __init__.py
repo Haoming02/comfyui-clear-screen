@@ -1,6 +1,8 @@
-from aiohttp import web
-import server
 import os
+
+from aiohttp import web
+
+import server
 
 WEB_DIRECTORY = "js"
 NODE_CLASS_MAPPINGS = {}

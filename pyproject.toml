@@ -1,7 +1,7 @@
 [project]
 name = "comfyui-clear-screen"
-description = "Add a button that clears the console"
-version = "1.2.1"
+description = "Add a button that clears the consoles"
+version = "1.2.2"
 license = { text = "MIT License" }
 dependencies = []
 
